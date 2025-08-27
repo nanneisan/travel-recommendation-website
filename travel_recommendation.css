@@ -5,35 +5,58 @@
     padding: 0;
     box-sizing: border-box;
 }
-nav {
-    background-color: #f0f0f0;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-  }
-  
-  nav ul {
-    list-style-type: none;
-    /* padding: 0; */
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* Left */
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.nav-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Center */
+.nav-center a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-center a:hover {
+  color: #ffdd57;
+}
+
+/* Right */
+.nav-right {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.nav-right button{
+    margin: 5px;
+    border-radius: 5px;
+}
   
   /* Basic CSS for the form elements */
   body {
     font-family: Arial, sans-serif;
-    background-image: ;
+    background-image: url("./city.jpeg");
     /* margin: 20px; */
   }
   
@@ -45,14 +68,7 @@ nav {
     margin-bottom: 10px;
   }
   
-  label {
-    display: inline-block;
-    width: 100px;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  select {
+  input[type="text"] {
     width: 200px;
     padding: 5px;
   }
@@ -69,26 +85,12 @@ nav {
     background-color: #45a049;
   }
   
-  /* Basic CSS for the report section */
-  h2 {
-    margin-top: 30px;
+
+  /* Content */
+.content {
+    text-align: center;
+    margin-top: 20%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 10px;
   }
-  
-  #report,#result {
-    padding: 10px;
-    max-width: 400px;
-    word-wrap: break-word;
-  }
-#result{
-  height: 400px;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-}
-  #result img{
-    width: 200px;
-    height: 100px;
-  }
-  
