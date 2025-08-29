@@ -18,6 +18,7 @@ function searchRecommendation() {
     const input = document.getElementById('search-input').value.toLowerCase();
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
+    
 
     fetch('travel_recommendation_api.json')
       .then(response => response.json())
@@ -35,14 +36,25 @@ function searchRecommendation() {
         } else {
           resultDiv.innerHTML = 'recommendation not found.';
         }
-
-        resultArr.forEach(result => {
-            resultDiv.innerHTML += `<div class="">`;
-            resultDiv.innerHTML += `<img src="${result.imageUrl}" alt="hjh">`;
-            resultDiv.innerHTML += `<h2>${result.name}</h2>`;
-            resultDiv.innerHTML += `<p>${result.description}</p>`;
-            resultDiv.innerHTML += `</div>`;
-        });
+        if(resultArr.length > 0){
+            resultArr.forEach(result => {
+                const resultSectionDiv = document.createElement('div');
+                resultSectionDiv.setAttribute("class", "result-section");
+                const resultBodyDiv = document.createElement('div');
+                resultBodyDiv.setAttribute("class", "result-body");
+                resultBodyDiv.innerHTML = '';
+                resultSectionDiv.innerHTML += `<img src="${result.imageUrl}" alt="hjh">`;
+                resultBodyDiv.innerHTML += `<h2>${result.name}</h2>`;
+                resultBodyDiv.innerHTML += `<p>${result.description}</p>`;
+                resultBodyDiv.innerHTML += `<button>Visit</button>`;
+                resultSectionDiv.append(resultBodyDiv);
+                resultDiv.appendChild(resultSectionDiv);
+                
+            });
+        } else {
+            resultDiv.innerHTML = 'recommendation not found.';
+        }
+        console.log("result div", resultDiv)
       })
       .catch(error => {
         console.error('Error:', error);
@@ -54,6 +66,7 @@ function searchRecommendation() {
   function resetRecommendation(){
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
+    document.getElementById("search-input").value = "";
   }
 
   btnReset.addEventListener('click', resetRecommendation)

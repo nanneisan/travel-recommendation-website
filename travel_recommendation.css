@@ -12,13 +12,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 72%);
+  padding: 10px;
 }
 
 /* Left */
 .nav-left {
   display: flex;
   align-items: center;
+  max-width: 10%;
 }
 .logo {
   width: 40px;
@@ -32,6 +34,10 @@
 }
 
 /* Center */
+.nav-center {
+    max-width: 50%;
+    text-align: center;
+}
 .nav-center a {
   margin: 0 15px;
   text-decoration: none;
@@ -47,7 +53,7 @@
 .nav-right {
   display: flex;
   align-items: center;
-  padding: 10px;
+  max-width: 20%;
 }
 
 .nav-right button{
@@ -58,7 +64,7 @@
   /* Basic CSS for the form elements */
   body {
     font-family: Arial, sans-serif;
-    background-image: url("./city.jpeg");
+    background-image: url("./city_bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     /* margin: 20px; */
@@ -296,6 +302,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: background 0.3s ease;
+    margin-top: 10px;
   }
   
   .submit-btn:hover {
