@@ -57,6 +57,8 @@
   body {
     font-family: Arial, sans-serif;
     background-image: url("./city.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
     /* margin: 20px; */
   }
   
@@ -88,9 +90,111 @@
 
   /* Content */
 .content {
-    text-align: center;
     margin-top: 20%;
-    background: rgba(0, 0, 0, 0.5);
+    margin-left: 10%;
     padding: 30px;
     border-radius: 10px;
+    color: white;
+    width: 40%
   }
+
+.content h1 {
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+.content p {
+    padding: 10px;
+}
+
+#book-btn {
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Social Icons Sidebar */
+.social-icons {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .social-icons a:hover {
+    background: #ffdd57;
+    color: black;
+    transform: scale(1.1);
+  }
+  
+
+  /* About Page Container */
+.about-container {
+    max-width: 80%;
+    margin: 50px auto;
+    padding: 30px;
+    color: white;
+    background: rgb(0 0 0 / 27%);
+    border-radius: 5px;
+  }
+  
+  .about-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-container p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Team Section */
+  .team-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .team-member {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+  
+  .team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .team-member h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #ffdd57;
+  }
+  
+  .team-member p {
+    font-size: 16px;
+    color: #ddd;
+  }
+  
